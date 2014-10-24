@@ -1,0 +1,74 @@
+  .nano {height: 400px; }
+  .nano .nano-content {  }
+  .nano .nano-pane   { background: rgb(0, 0, 0, 0); }
+  .nano .nano-slider { background: rgb(0, 0, 0, 0); }
+
+  h1, h2, h3, h4, h5{
+    font-family: 'Lustria', serif;
+  }
+  body{
+    background-color: #efefef;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    cursor: default;
+  }
+  #header{
+    padding: 25px 0px 25px 30px;
+  }
+  #header #strategy-div{
+    font-size: 20px;
+    padding-left: 25px;
+  }
+  .title{
+    font-size: 45px;
+    font-family: 'Lustria', serif;
+  }
+  .title a{
+    text-decoration: none;
+    color: black;
+  }
+  .title a:hover{
+    text-decoration: underline;
+  }
+  #column{
+    width: 95%;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .button-icon{ cursor: pointer;  }
+  .button-icon .hover {display: none;}
+  .button-icon:hover > .normal { display: none; }
+  .button-icon:hover > .hover { display: block; }
+
+  input[type=radio].css-checkbox {
+              position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+            }
+
+            input[type=radio].css-checkbox + label.css-label {
+              padding-left:23px;
+              height:18px; 
+              display:inline-block;
+              line-height:18px;
+              background-repeat:no-repeat;
+              background-position: 0 0;
+              font-size:18px;
+              vertical-align:middle;
+              cursor:pointer;
+
+            }
+
+            input[type=radio].css-checkbox:checked + label.css-label {
+              background-position: 0 -18px;
+            }
+            label.css-label {
+        background-image:url(radio.png);
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+  

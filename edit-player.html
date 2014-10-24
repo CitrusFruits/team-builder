@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Player</title>
+  <link rel="stylesheet" href="css/chosen.css"></link>
+  <style>
+  body{
+    /*color: white;
+    background-color: #333;
+    font-family: Arial;
+    font-size: 20px;*/
+  }
+  </style>
+</head>
+<body>
+  <h1>Edit Player</h1>
+  <a href="build-team.php">Home</a><br/>
+  Summoner Name: <input type="text" name="name-summoner" id="name-summoner"></input><br/>
+  First Name: <input type="text" name="name-first" id="name-first"></input><br/>
+  Last Name: <input type="text" name="name-last" id="name-last"></input><br/>
+  Position: <span id="position"></span><br/>
+  Champions: 
+  <select data-placeholder="Select champions..." id="chosen-select"  style="width:350px;" tabindex="2">
+    <option value=""></option>
+    <option value="Aatrox">Aatrox</option>
+    <option value="Ahri">Ahri</option>
+    <option value="Akali">Akali</option>
+    <option value="Alistar">Alistar</option>
+    <option value="Amumu">Amumu</option>
+    <option value="Anivia">Anivia</option>
+    <option value="Annie">Annie</option>
+    <option value="Ashe">Ashe</option>
+    <option value="Azir">Azir</option>
+    <option value="Blitzcrank">Blitzcrank</option>
+    <option value="Brand">Brand</option>
+    <option value="Braum">Braum</option>
+    <option value="Caitlyn">Caitlyn</option>
+    <option value="Cassiopeia">Cassiopeia</option>
+    <option value="ChoGath"> Cho'Gath</option>
+    <option value="Corki">Corki</option>
+    <option value="Darius">Darius</option>
+    <option value="Diana">Diana</option>
+    <option value="DrMundo"> Dr. Mundo</option>
+    <option value="Draven">Draven</option>
+    <option value="Elise">Elise</option>
+    <option value="Evelynn">Evelynn</option>
+    <option value="Ezreal">Ezreal</option>
+    <option value="Fiddlesticks">Fiddlesticks</option>
+    <option value="Fiora">Fiora</option>
+    <option value="Fizz">Fizz</option>
+    <option value="Galio">Galio</option>
+    <option value="Gangplank">Gangplank</option>
+    <option value="Garen">Garen</option>
+    <option value="Gnar">Gnar</option>
+    <option value="Gragas">Gragas</option>
+    <option value="Graves">Graves</option>
+    <option value="Hecarim">Hecarim</option>
+    <option value="Heimerdinger">Heimerdinger</option>
+    <option value="Irelia">Irelia</option>
+    <option value="Janna">Janna</option>
+    <option value="JarvanIV"> Jarvan IV</option>
+    <option value="Jax">Jax</option>
+    <option value="Jayce">Jayce</option>
+    <option value="Jinx">Jinx</option>
+    <option value="Karma">Karma</option>
+    <option value="Karthus">Karthus</option>
+    <option value="Kassadin">Kassadin</option>
+    <option value="Katarina">Katarina</option>
+    <option value="Kayle">Kayle</option>
+    <option value="Kennen">Kennen</option>
+    <option value="KhaZix"> Kha'Zix</option>
+    <option value="KogMaw"> Kog'Maw</option>
+    <option value="LeBlanc">LeBlanc</option>
+    <option value="LeeSin"> Lee Sin</option>
+    <option value="Leona">Leona</option>
+    <option value="Lissandra">Lissandra</option>
+    <option value="Lucian">Lucian</option>
+    <option value="Lulu">Lulu</option>
+    <option value="Lux">Lux</option>
+    <option value="Malphite">Malphite</option>
+    <option value="Malzahar">Malzahar</option>
+    <option value="Maokai">Maokai</option>
+    <option value="MasterYi"> Master Yi</option>
+    <option value="MissFortune"> Miss Fortune</option>
+    <option value="Mordekaiser">Mordekaiser</option>
+    <option value="Morgana">Morgana</option>
+    <option value="Nami">Nami</option>
+    <option value="Nasus">Nasus</option>
+    <option value="Nautilus">Nautilus</option>
+    <option value="Nidalee">Nidalee</option>
+    <option value="Nocturne">Nocturne</option>
+    <option value="Nunu">Nunu</option>
+    <option value="Olaf">Olaf</option>
+    <option value="Orianna">Orianna</option>
+    <option value="Pantheon">Pantheon</option>
+    <option value="Poppy">Poppy</option>
+    <option value="Quinn">Quinn</option>
+    <option value="Rammus">Rammus</option>
+    <option value="Renekton">Renekton</option>
+    <option value="Rengar">Rengar</option>
+    <option value="Riven">Riven</option>
+    <option value="Rumble">Rumble</option>
+    <option value="Ryze">Ryze</option>
+    <option value="Sejuani">Sejuani</option>
+    <option value="Shaco">Shaco</option>
+    <option value="Shen">Shen</option>
+    <option value="Shyvana">Shyvana</option>
+    <option value="Singed">Singed</option>
+    <option value="Sion">Sion</option>
+    <option value="Sivir">Sivir</option>
+    <option value="Skarner">Skarner</option>
+    <option value="Sona">Sona</option>
+    <option value="Soraka">Soraka</option>
+    <option value="Swain">Swain</option>
+    <option value="Syndra">Syndra</option>
+    <option value="Talon">Talon</option>
+    <option value="Taric">Taric</option>
+    <option value="Teemo">Teemo</option>
+    <option value="Thresh">Thresh</option>
+    <option value="Tristana">Tristana</option>
+    <option value="Trundle">Trundle</option>
+    <option value="Tryndamere">Tryndamere</option>
+    <option value="TwistedFate"> Twisted Fate</option>
+    <option value="Twitch">Twitch</option>
+    <option value="Udyr">Udyr</option>
+    <option value="Urgot">Urgot</option>
+    <option value="Varus">Varus</option>
+    <option value="Vayne">Vayne</option>
+    <option value="Veigar">Veigar</option>
+    <option value="VelKoz"> Vel'Koz</option>
+    <option value="Vi">Vi</option>
+    <option value="Viktor">Viktor</option>
+    <option value="Vladimir">Vladimir</option>
+    <option value="Volibear">Volibear</option>
+    <option value="Warwick">Warwick</option>
+    <option value="Wukong">Wukong</option>
+    <option value="Xerath">Xerath</option>
+    <option value="XinZhao"> Xin Zhao</option>
+    <option value="Yasuo">Yasuo</option>
+    <option value="Yorick">Yorick</option>
+    <option value="Zac">Zac</option>
+    <option value="Zed">Zed</option>
+    <option value="Ziggs">Ziggs</option>
+    <option value="Zilean">Zilean</option>
+    <option value="Zyra">Zyra</option>
+  </select>
+  <ul id="champion-pool">
+  </ul>
+  <button onclick="saveData()">Save</button>
+</div>
+  <script src="js/jquery-1.6.1.min.js" type="text/javascript"></script>
+  <script src="js/chosen.jquery.js" type="text/javascript"></script>
+  <script src="js/data-wrangler.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    var parameters = getParameters();
+    $("#position").html(parameters.position);
+    loadData();
+    function saveData(){
+        var saveData = {};
+
+        saveData.nameSummoner = $('#name-summoner').val();
+        saveData.nameFirst = $('#name-first').val();
+        saveData.nameLast = $('#name-last').val();
+
+        saveData.position = parameters.position;
+
+        var champions = $('.champion');
+        saveData.championPool = [];
+        for(var i = 0; i < champions.length; i++){
+            var champion = {}
+            champion.name = champions[i].getAttribute('name');
+            var tiers = $('.' + champion.name +'-tier');
+            for(var j = 0; j < tiers.length; j++){
+                if(tiers[j].checked){
+                    champion.tier = parseInt(tiers[j].value);
+                }
+            }
+            saveData.championPool.push(champion);
+        }
+        saveData.championPool = saveData.championPool.sort(function (a, b, c){
+            if(a.name > b.name){
+                return 1;
+            }
+            return -1;
+        });
+        data.save(saveData, function(data){
+            alert(data.responseText);
+            window.location=('build-team.php');
+        });
+    }
+
+    function loadData(){
+        if(parameters.name && parameters.position){
+            data.load(parameters, function(data){
+                console.log('success');
+                $('#name-summoner').val(data.nameSummoner);
+                $('#name-first').val(data.nameFirst);
+                $('#name-last').val(data.nameLast);
+                var champions = data.championPool;
+                for(var i = 0; i < champions.length; i++){
+                    addChampion(champions[champions.length - 1 - i].name, champions[champions.length - 1 - i].tier);
+                }
+            });
+        }
+
+    }
+
+
+    function getParameters(){
+        var url = $('document').context.URL;
+        var getString = url.split('?');
+        if(getString[1]){
+            var chunks = getString[1].split('&');
+            var getParams = {};
+            for(var i = 0; i < chunks.length; i++){
+                var tuple = chunks[i].split('=');
+                getParams[tuple[0]] = tuple[1].split('%20').join(' ');
+            }
+            //console.log(getParams);
+            return getParams;
+        }
+    }
+    // Dom event handling
+    $("#chosen-select").chosen({});
+    var chosenSelect = $("#chosen-select");
+    //console.log(chosenSelect);
+    $("#chosen-select").change(function(e){
+      console.log("changed!");
+      //$("#champion-pool").html("");
+      if(!chosenSelect.val()){
+        return;
+      } 
+        addChampion(chosenSelect.val());
+    })
+
+    function addChampion(name, tier){
+       var h = '<li class="champion" name="' + name + '" id="' + name + '-li">';
+        h += '<span onclick="$(\'#' + name + '-li\').remove()">x </span>'
+        h += '<span>' + name + '</span>';
+        if(!tier){
+            tier = 1;
+        }
+        for(var i = 1; i <= 4; i++){
+            h += '<input type="radio" class="' + name +'-tier" name="' + name +'-tier" value="' + i + '"';
+            if(tier == i){
+                h += 'checked'
+            }
+            h += '>' + i + '</input>';
+        }
+        /*'<input type="radio" class="' + name +'-tier" name="' + name +'-tier" value="2">2</input><input type="radio" class="' + name +'-tier" name="' + name +'-tier" value="3">3</input><input type="radio" class="' + name +'-tier" name="' + name +'-tier" value="4">4</input>'*/
+        h += '</li>';
+        $("#champion-pool").prepend(h);
+    }
+  </script>
+</body>
+</html>
